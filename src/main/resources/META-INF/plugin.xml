@@ -8,7 +8,13 @@
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
+
     <extensions defaultExtensionNs="com.intellij">
+        <fileType name="Demo file" implementationClass="com.github.sischnei.reformatissuedemo.DemoFileType"
+                  fieldName="INSTANCE"
+                  language="DemoLanguage" extensions="demo"/>
+        <lang.parserDefinition language="DemoLanguage" implementationClass="com.github.sischnei.reformatissuedemo.DemoParserDefinition"/>
+        <formattingService implementation="com.github.sischnei.reformatissuedemo.DemoFormatter"/>
         <toolWindow factoryClass="com.github.sischnei.reformatissuedemo.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
     </extensions>
 
